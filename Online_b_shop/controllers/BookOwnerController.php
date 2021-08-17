@@ -456,6 +456,11 @@
 		
 		
 	}
+	function searchBook($key){
+		$query = "select * from owner where name like '%$key%'";
+		$rs = get ($query);
+		return $rs;
+	}
 	
 	
 ?>

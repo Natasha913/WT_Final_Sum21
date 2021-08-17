@@ -103,7 +103,7 @@ tr:nth-child(even) {
 						echo "<td>".$b["description"]. "</td>";
 						echo "<td><img width = '80px' height='100px' src= '".$b["pimage"]."'</td>";
 					    echo '<td><a href="editbook.php?id='.$id.'" class="red">  Edit</a></td>';
-						echo '<td><a class="red1">Delete</td>';
+						echo '<td><a href="deletebook.php?id='.$id.'" class="red1">Delete</td>';
 					echo "</tr>";
 					$i++;
 				}

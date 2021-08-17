@@ -95,6 +95,6 @@
 <br>
 
 
- <a  href="r_r_deli.php" class ="red1">Back</a>
+ <a  href="all_b_r.php" class ="red1">Back</a>
    </body>
   </html>

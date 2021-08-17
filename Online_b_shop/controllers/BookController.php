@@ -21,9 +21,6 @@
 	"Detective","Fantacy","Romance","Science Fiction","Short Stories","Suspense");
 	if(isset($_POST["add_book"]))
 	{
-		
-		
-	
 			if(empty($_POST["name"]))
 		{
 			$hasError  = true;
@@ -94,6 +91,15 @@
 	//edt
 	if(isset($_POST["edit_book"]))
 	{
+					if(empty($_POST["name"]))
+		{
+			$hasError  = true;
+			$err_name = "Book Name Required";
+		}
+		else{
+			$name = $_POST["name"];
+		} 
+		
 		
 		if(empty($_POST["quantity"])){
 			$hasError = true;
@@ -108,9 +114,45 @@
 		{
 			$quantity = $_POST["quantity"];
 		}
+		if(empty($_POST["categories"])){
+			$hasError = true;
+			$err_categories="Category required";
+		} 
+	
+		else
+		{
+			$categories = $_POST["categories"];
+		}
+		if(empty($_POST["price"])){
+			$hasError = true;
+			$err_price="Price required";
+		} 
+		else if(!is_numeric($_POST["price"]))
+		{
+			$err_price="Price required";
+			$hasError = true;
+		}
+		else 
+		{
+			$price = $_POST["price"];
+		}
+		if(empty($_POST["des"])){
+			$hasError = true;
+			$err_des="Description Required";
+		} 
+		else 
+		{
+			$des = $_POST["des"];
+		}
+		
+	
+		
+		$fileType = strtolower(pathinfo(basename($_FILES["pimage"]["name"]),PATHINFO_EXTENSION));
+		$target = "storage/book_images/".uniqid().".$fileType";
+		move_uploaded_file($_FILES["pimage"]["tmp_name"],$target);
 		
 			
-		$rs =  updateBook($_POST["quantity"]);
+		$rs =  updateBook($_POST["name"],$_POST["quantity"],$_POST["categories"],$_POST["price"],$_POST["des"],$_POST["pimage"],$_POST["id"]);
 		if($rs === true){
 			header("Location: allbook.php");
 		}
@@ -135,11 +177,12 @@
 		$rs = get($query);
 		return $rs[0];
 	}
-	function updateBook($quantity){
-		$query="update newbook set quantity='$quantity' where id='$id'";
+	function updateBook($name,$quantity,$categories,$price,$des,$pimage,$id){
+		$query="update newbook set name='$name',quantity='$quantity',categories='$categories',price='$price',des='$des',pimage='$pimage' where id='$id'";
 		return execute($query);
 		
 	}
+		
 		
 	function searchBook($key){
 		$query = "select * from newbook where name like '%$key%'";

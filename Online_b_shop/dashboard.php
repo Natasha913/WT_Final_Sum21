@@ -23,12 +23,16 @@
   border-radius: 5px;
   
 }
+
 			 </style>
 	  </head>
       <body>
 	        <div>
 			<h1 class="header">Admin <?php echo $_SESSION["loggeduser"];?></h1>
 			</div>
+			<br>
+			
+			<div id ="suggesstion"></div>
 			<div align = "center">
 			<a  href="admin.php" class ="button button7">All Admin</a>
 			<a  href="bookowner.php" class ="button button3">Book Owner</a>
@@ -38,7 +42,7 @@
 			<a  href="book_cllc.php" class ="button button7">All Books</a>
 			<a  href="order.php" class ="button button4">Orders</a>
 			<a  href="r_ordr.php" class ="button button0">Rents</a>
-			<a  href="allcomplains.php" class ="button button3">Customer Complaints</a>
+			<a  href="allcomplains.php" class ="button button3"> Complaints</a>
 			<a  href="home.php" class ="button button6">Back</a>
 		  
 			

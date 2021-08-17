@@ -6,7 +6,7 @@
 	 {
 		 foreach ($Books as $k)
 		 {
-			 echo  "<a href='editbook.php?id=".$k["id"]."'>".$k["name"]."</a><br>";
+			 echo  "<a href='allbook.php?id=".$k["id"]."'>".$k["name"]."</a><br>";
 		 }
 	 }
 ?>

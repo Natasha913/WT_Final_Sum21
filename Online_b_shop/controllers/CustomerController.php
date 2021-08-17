@@ -20,6 +20,7 @@
 	$err_db="";
 	
 	$hasError=false;
+	
 	$user = array ("Adrita Das"=>"Adri123#","monisha12"=>"Monisha123","mohona12"=>"Mohona123#","rahimali"=>"Rahim123#","Shimu Akter"=>"Shimu123#"); 
 	
 	//pass

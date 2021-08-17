@@ -67,6 +67,8 @@ tr:nth-child(even) {
 			<a  href="bookowner.php" class ="red2">Back</a>
 			</div>
 			
+			<br>
+			
 <div align = "center">
 	
 	<table class="">
@@ -102,5 +104,6 @@ tr:nth-child(even) {
 		</tbody>
 	</table>
 </div>
+<script src ="js/owners.js"></script>
 </body>
 </html>

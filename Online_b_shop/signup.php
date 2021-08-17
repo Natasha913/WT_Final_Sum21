@@ -35,6 +35,7 @@
 </style>
 	  </head>
 	    <script>
+		
 		var hasError=false;
 		function get(id){
 			return document.getElementById(id);
@@ -80,7 +81,7 @@
 				get("err_num").style.color="red";
 				hasError = true;
 			}
-			return !hasError;
+			return !hasError; 
 		}
 		function refresh(){
 			hasError = false;
