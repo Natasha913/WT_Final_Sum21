@@ -1,7 +1,7 @@
 <?php
 	require_once 'models/db_config.php';
 	$err_db="";
-	//validation variables
+	
 	if(isset($_POST["add_reviews"])){
 		
 		//if no error

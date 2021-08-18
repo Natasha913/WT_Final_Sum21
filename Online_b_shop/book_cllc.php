@@ -25,7 +25,7 @@
 			<div align = "center">
 			<a  href="allbook.php" class ="button button0">All Book</a>
 			<a  href="addbook.php" class ="button button3">Add Book</a>
-			<a  href="home.php" class ="button button6">Back</a>
+			<a  href="dashboard.php" class ="button button6">Back</a>
 		  
 			
 			

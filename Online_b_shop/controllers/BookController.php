@@ -19,7 +19,7 @@
 		 
      $cat= array("Horror","Novel","Action and Adventure","Classics","Comic Book",
 	"Detective","Fantacy","Romance","Science Fiction","Short Stories","Suspense");
-	if(isset($_POST["add_book"]))
+	if(isset($_POST["add_book"])) //prmt a 1 vrbl rkhe chck kre st hyche kna 
 	{
 			if(empty($_POST["name"]))
 		{

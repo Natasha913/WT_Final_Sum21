@@ -15,7 +15,7 @@
 	
 	$err_db="";
 	
-	$hasError=false;
+	$hasError=false; //flg by dft fls
 	
 	//pass
 	function validPass($password)

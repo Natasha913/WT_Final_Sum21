@@ -3,11 +3,11 @@ function get(id){
 }
 function checkUname(uname){
 		var name=uname.value;
-		var xhttp= new XMLHttpRequest();
+		var xhttp= new XMLHttpRequest(); // cnstc typ mthd crt hy
 		xhttp.onreadystatechange=function(){
 			 if(this.readyState==4 && this.status==200)
 			 {
-				 var rs=this.responseText;
+				 var rs=this.responseText; 
 				 rs=rs.trim();
 				 if(rs == "true"){
 				    get("err_uname").innerHTML="";
@@ -19,8 +19,8 @@ function checkUname(uname){
 				 }
 	            }
 		};  
-		xhttp.open("GET","checkuname.php?uname="+name,true);
-		xhttp.send();
+		xhttp.open("GET","checkuname.php?uname="+name,true); // con kr wth srv
+		xhttp.send(); //get
 	}
 	
 	function checkNID(nid){
